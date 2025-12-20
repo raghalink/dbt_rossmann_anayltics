@@ -3,8 +3,13 @@
 .venv/
 venv/
 
-# Raw data
+# data
 data_raw/
+*.csv
+*.xlsx
+*.parquet
+
+data_clean/
 *.csv
 *.xlsx
 *.parquet
