@@ -1,0 +1,19 @@
+version: 2
+
+exposures:
+  - name: rossmann_dashboard
+    label: Rossmann Sales Dashboard (Power BI)
+    type: dashboard
+    maturity: high
+    owner:
+      name: Raga
+      email: your_email@example.com
+    description: >
+      3-page dashboard: Executive overview, Promotion impact, Store & competition performance.
+      Built on mart tables from dbt.
+
+    depends_on:
+      - ref('fct_daily_sales')
+      - ref('fct_weekly_sales')
+      - ref('dim_store')
+      - ref('dim_date')
