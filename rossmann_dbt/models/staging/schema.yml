@@ -1,0 +1,83 @@
+version: 2
+
+models:
+  - name: stg_stores
+    description: "Staging: store attributes (1 row per store)."
+
+    columns:
+      - name: store_id
+        tests: [not_null, unique]
+
+      - name: store_type
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['a','b','c','d']
+              severity: warn
+
+      - name: assortment
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['a','b','c']
+              severity: warn
+
+      - name: has_promo2
+        tests: [not_null]
+
+    tests:
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "competition_distance is null or competition_distance >= 0"
+          severity: warn
+
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "not (has_promo2 = false and (promo2_since_week is not null or promo2_since_year is not null or promo2_interval is not null))"
+          severity: warn
+
+
+  - name: stg_sales
+    description: "Staging: daily sales (1 row per store per day)."
+
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          arguments:
+            combination_of_columns: ['store_id', 'date_day']
+
+      - dbt_utils.expression_is_true:
+          arguments:
+            expression: "sales >= 0"
+          severity: error
+
+    columns:
+      - name: store_id
+        tests: [not_null]
+
+      - name: date_day
+        tests: [not_null]
+
+      - name: sales
+        tests: [not_null]
+
+      - name: customers
+        tests: [not_null]
+
+      - name: is_open
+        tests: [not_null]
+
+      - name: has_promo
+        tests: [not_null]
+
+      - name: is_school_holiday
+        tests: [not_null]
+
+      - name: state_holiday_type
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['a','b','c']
+              severity: warn
+              where: "state_holiday_type is not null"

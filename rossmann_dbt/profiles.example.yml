@@ -1,0 +1,13 @@
+#This is an example profiles.yml replicating the profiles.yml in this project, change it according to your connection and sql preferences.
+rossmann_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('HOST')}}"
+      port: "{{ env_var('DBT_PORT')}}"
+      user: "{{ env_var('USER')}}"
+      password: "{{ env_var('POSTGRE_PWD')}}"
+      dbname: "{{ env_var('DBT_DBNAME')}}"
+      schema: analytics
+      threads: 4
