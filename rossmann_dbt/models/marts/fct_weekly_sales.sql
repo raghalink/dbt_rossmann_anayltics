@@ -1,4 +1,6 @@
-{{ config(materialized='table')}}
+{{ config(materialized='table', post_hook=[ "create index if not exists idx_fct_weekly_sales_year_week on {{ this }} (year_week)",
+      "create index if not exists idx_fct_weekly_sales_store_year_week on {{ this }} (store_id, year_week)",
+      "analyze {{ this }}"])}}
 
 with daily as (
   select *
