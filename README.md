@@ -144,6 +144,7 @@ Focused analysis of promotional effectiveness and uplift.
 - Promo2 store coverage
 
 **Key visuals & insights**
+
 - Daily sales comparison: promo vs non-promo days
 - Revenue contribution of promotions vs baseline sales
 - Promo sales performance by day of week
@@ -189,8 +190,36 @@ This ensures a clean separation of responsibilities:
 
 ## Versioning & milestones 🏷️
 
-Semantic tags represent pipeline milestones (v0.2.0 → v2.0.0). See project history for details.
+Each tagged version represents a **stable, runnable milestone** in the workflow.  
+Tags are used intentionally as *save points* to reflect real analytics engineering phases.
+
+### Versioning Strategy
+
+- **Major versions** → new pipeline layer or end-user deliverable  
+- **Minor versions** → completed modeling layers within dbt  
+- **Patch versions** → fixes or adjustments after a tagged release  
+
+Unfinished or experimental work is **never tagged**.
+
+---
+
+### Milestone Breakdown
+
+| Version | Description |
+|------|------------|
+| **v0.1** | Project scaffold and repository structure |
+| **v0.2.0** | Data cleaning pipeline finalized (Python) |
+| **v0.3.0** | Cleaned data loaded and validated in PostgreSQL |
+| **v1.0.0** | dbt initialized with sources and staging models |
+| **v1.1.0** | Intermediate models with dbt tests |
+| **v1.2.0** | BI-ready marts (facts & dimensions) |
+| **v1.3.0** | Exposures and custom business tests |
+| **v1.4.0** | Performance optimization (materializations & indexes) |
+| **v1.4.1** | Post-release fixes to marts and exposures |
+| **v2.0.0** | Final Power BI dashboard and documentation |
 
 * * *
 
 ## Author
+
+Raga, Junior Analytics Engineer | Berlin, Germany
