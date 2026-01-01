@@ -99,7 +99,7 @@ Generated via `dbt docs generate`:
 images/dbt_lineage_graph.png
 ```
 
-![dbt Lineage Graph](images\dbt lineage graph.png)
+![dbt Lineage Graph](images\dbt_lineage_graph.png)
 
 This graph shows the full transformation flow from raw sources → staging → intermediate → marts → exposure.
 * * *
