@@ -6,10 +6,9 @@ exposures:
     type: dashboard
     maturity: high
     owner:
-      name: Raga
-      email: your_email@example.com
+      name: Raghavendra Prasad
     description: >
-      3-page dashboard: Executive overview, Promotion impact, Store & competition performance.
+      3-page dashboard: Executive Sales overview, Sales & Promotion impact, Competition Impact on Store performance.
       Built on mart tables from dbt.
 
     depends_on:
