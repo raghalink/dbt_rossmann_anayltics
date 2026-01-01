@@ -1,18 +1,10 @@
-```.gitignore
 # Virtual environments
 .venv/
 venv/
 
-# data
+# Data (generated locally)
 data_raw/
-*.csv
-*.xlsx
-*.parquet
-
 data_clean/
-*.csv
-*.xlsx
-*.parquet
 
 # Python cache
 __pycache__/
@@ -24,16 +16,18 @@ __pycache__/
 # VS Code
 .vscode/
 
-# Temp files
+# Temp / OS files
 *.tmp
 *.log
 *.bak
 ~$*
 
-# dbt 
-dbt/profiles.yml
-dbt/.user.yml
-dbt/target/
-dbt/logs/
-dbt/dbt_packages/
-```
+# Environment variables
+.env
+
+# dbt (local & generated artifacts)
+rossmann_dbt/profiles.yml
+rossmann_dbt/.user.yml
+rossmann_dbt/target/
+rossmann_dbt/logs/
+rossmann_dbt/dbt_packages/
