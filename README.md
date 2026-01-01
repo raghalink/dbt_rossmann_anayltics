@@ -95,11 +95,7 @@ Cleaned CSVs are produced locally and intentionally excluded from Git.
 
 Generated via `dbt docs generate`:
 
-```text
-images/dbt_lineage_graph.png
-```
-
-![dbt Lineage Graph](images\dbt_lineage_graph.png)
+![dbt Lineage Graph](images/dbt_lineage_graph.png)
 
 This graph shows the full transformation flow from raw sources → staging → intermediate → marts → exposure.
 * * *
