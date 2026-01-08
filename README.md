@@ -3,7 +3,7 @@
 **End‑to‑end analytics engineering project** built on the [Rossmann Store Sales dataset](https://www.kaggle.com/c/rossmann-store-sales).  
 Demonstrates a production‑style analytics workflow: 
 
-**raw ingestion → deterministic cleaning (Python) → warehouse modeling with (dbt) → Power BI dashboard.
+**raw ingestion → deterministic cleaning (Python) → warehouse modeling with (dbt) → Power BI dashboard.**
 
 * * *
 
