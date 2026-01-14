@@ -1,9 +1,8 @@
 # Rossmann Analytics Engineering Project 🚀
 
-**End‑to‑end analytics engineering project** built on the [Rossmann Store Sales dataset](https://www.kaggle.com/c/rossmann-store-sales).  
-Demonstrates a production‑style analytics workflow: 
-
-**raw ingestion → deterministic cleaning (Python) → warehouse modeling with (dbt) → Power BI dashboard.**
+**End‑to‑end analytics project** demonstrating analytics engineering principles and business-focused reporting.The project demonstrates a production‑style analytics workflow: 
+**raw ingestion → deterministic cleaning (Python) → warehouse modeling with (dbt) → Power BI dashboard**
+The primary focus is on building reliable, well-modeled analytical datasets, and using them to answer concrete business questions around sales performance, promotions, and competition.  
 
 * * *
 
@@ -102,9 +101,7 @@ This graph shows the full transformation flow from raw sources → staging → i
 
 ## Dashboard (Power BI) 📊
 
-The Power BI dashboard is built **directly on top of dbt marts** and is structured as a **three-page analytical narrative**, progressing from executive-level monitoring to deeper business drivers.
-
-The dashboard is fully interactive with slicers for **date range, store type, and assortment level**.
+The Power BI dashboard is built **on top of curated dbt marts** and designed as a **three-page analytical narrative** to answer key business questions. It progresses from executive-level monitoring to deeper analysis of sales drivers, promotional impact, and compettive effects, with fully interactive filtering across **date range, store type, and assortment level**.
 
 ---
 
