@@ -1,7 +1,9 @@
 # Rossmann Analytics Engineering Project 🚀
 
 **End‑to‑end analytics project** demonstrating analytics engineering principles and business-focused reporting.The project demonstrates a production‑style analytics workflow: 
+
 **raw ingestion → deterministic cleaning (Python) → warehouse modeling with (dbt) → Power BI dashboard**
+
 The primary focus is on building reliable, well-modeled analytical datasets, and using them to answer concrete business questions around sales performance, promotions, and competition.  
 
 * * *
