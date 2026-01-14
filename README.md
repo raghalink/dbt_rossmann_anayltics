@@ -215,4 +215,4 @@ Unfinished or experimental work is **never tagged**.
 
 ## Author
 
-Raga, Junior Analytics Engineer | Berlin, Germany
+Raga, Junior Analytics Engineer (Analytics Engineering & BI) | Berlin, Germany
