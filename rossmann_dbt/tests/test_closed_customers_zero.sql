@@ -1,5 +1,3 @@
--- Test fails if it returns any rows
-
 select
   store_id,
   date_day,
